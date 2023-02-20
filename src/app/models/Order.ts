@@ -17,13 +17,13 @@ export const Order = model('Order', new Schema({
   products: {
     required: true,
     type: [{
-      category: {
-        product: Schema.Types.ObjectId,
+      product: {
+        type: Schema.Types.ObjectId,
         required: true,
         ref: 'Product',
       },
       quantity: {
-        tupe: Number,
+        type: Number,
         default: 1,
       }
     }]
